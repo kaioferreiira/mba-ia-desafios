@@ -9,6 +9,7 @@ from langchain_postgres import PGVector
 
 load_dotenv()
 
+# -- Iniciando ingestão de PDF na base --------------
 def ingest_pdf(pdf_path: str):
     
     print("🚀 Iniciando processamento do PDF...")
@@ -18,8 +19,8 @@ def ingest_pdf(pdf_path: str):
     enriched = _enrich_chunks(chunks)
     save_embeddings(enriched)
 
-    
     print("✅ Processamento do PDF finalizado com sucesso!")
+# -------------------- -----------------------------
 
 
 # -------------------- READ PDF --------------------
